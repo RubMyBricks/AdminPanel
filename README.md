@@ -4,6 +4,9 @@ Discord server: https://discord.gg/gPg92292HS
 
 Discord: rubmybricks
 
+## Requirements:
+https://umod.org/plugins/inventory-viewer
+
 ## Permissions: 
 adminpanel.all - Master permission for everything 
 
