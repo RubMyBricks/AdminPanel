@@ -7,6 +7,8 @@ Discord: rubmybricks
 ## Requirements:
 https://umod.org/plugins/inventory-viewer
 
+https://umod.org/plugins/map-note-teleport
+
 ## Permissions: 
 adminpanel.all - Master permission for everything 
 
@@ -31,8 +33,6 @@ adminpanel.maxhealth - Max health permission
 adminpanel.kick - Kick players permission
 
 adminpanel.devwipe - Dev wipe permission
-
-adminpanel.timecontrol - Time control permission
 
 adminpanel.weathercontrol - Weather
 
