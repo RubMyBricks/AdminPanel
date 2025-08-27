@@ -1,4 +1,13 @@
-﻿using Oxide.Core.Plugins;
+﻿///////////////////////////////////////////////////////////////////////////
+//                         Made by RubMyBricks                           //
+//                         Discord: rubmybricks                          //
+//                         DiscordServer: https://discord.gg/gPg92292HS  //
+//                                                                       //
+//                                                                       //
+//                         Feel free to message me on                    //
+//                         discord if you have any issues!               //
+///////////////////////////////////////////////////////////////////////////       
+using Oxide.Core.Plugins;
 using Oxide.Game.Rust.Cui;
 using UnityEngine;
 using System.Collections.Generic;
@@ -186,7 +195,6 @@ namespace Oxide.Plugins
                 if (configData.StoredReports == null)
                     configData.StoredReports = new List<PlayerReport>();
 
-                // Set next report ID based on existing reports
                 if (configData.StoredReports.Count > 0)
                 {
                     nextReportId = (int)(configData.StoredReports.Max(r => r.reportId) + 1);
@@ -250,7 +258,6 @@ namespace Oxide.Plugins
                     reportsPage[player.userID] = 0;
                 }
 
-                // Give time for server to fully initialize before marking stats as loaded
                 timer.Once(5f, () => {
                     statsLoaded = true;
                 });
@@ -332,7 +339,6 @@ namespace Oxide.Plugins
                 DisableGodmode(player);
             }
 
-            // Only update the specific button instead of recreating entire UI
             if (adminPanelStates.ContainsKey(player.userID) && adminPanelStates[player.userID])
             {
                 UpdateGodmodeButton(player);
@@ -415,7 +421,7 @@ namespace Oxide.Plugins
             string buttonText = isEntityKillActive ? "Entity Kill (ON)" : "Entity Kill (OFF)";
             string buttonColor = isEntityKillActive ? configData.UI.WarningColor : configData.UI.SecondaryColor;
 
-            CuiHelper.DestroyUi(player, "Btn_0_1_0"); // Entity Kill button position
+            CuiHelper.DestroyUi(player, "Btn_0_1_0"); 
 
             var elements = new CuiElementContainer();
             elements.Add(new CuiPanel
@@ -457,7 +463,7 @@ namespace Oxide.Plugins
             string buttonText = isVanishActive ? "Vanish (ON)" : "Vanish (OFF)";
             string buttonColor = isVanishActive ? configData.UI.SuccessColor : configData.UI.SecondaryColor;
 
-            CuiHelper.DestroyUi(player, "Btn_1_0_1"); // Vanish button position
+            CuiHelper.DestroyUi(player, "Btn_1_0_1"); 
 
             var elements = new CuiElementContainer();
             elements.Add(new CuiPanel
@@ -518,10 +524,8 @@ namespace Oxide.Plugins
 
             try
             {
-                // Simple godmode - just set full protection
                 player.health = 100f;
 
-                // Set metabolism to safe values without protection properties
                 if (player.metabolism != null)
                 {
                     player.metabolism.calories.value = 500;
@@ -547,7 +551,6 @@ namespace Oxide.Plugins
 
             try
             {
-                // Reset metabolism to normal values
                 if (player.metabolism != null)
                 {
                     player.metabolism.calories.value = 250;
@@ -750,7 +753,7 @@ namespace Oxide.Plugins
                 elements.Add(new CuiLabel
                 {
                     Text = {
-                        Text = "AdminPanel v2.1.0 by RubMyBricks",
+                        Text = "AdminPanel v1.0.0 by Bricks",
                         FontSize = 10,
                         Align = TextAnchor.MiddleRight,
                         Color = "0.5 0.5 0.5 0.5",
@@ -1210,7 +1213,7 @@ namespace Oxide.Plugins
                 case "entitykill":
                     return HasPermission(player, PermissionEntityKill);
                 case "settime":
-                    return true; // Everyone can use set day/night
+                    return true; 
                 default:
                     return true;
             }
@@ -1664,7 +1667,7 @@ namespace Oxide.Plugins
 
                     currentX = 0f;
 
-                    // Report ID
+                    // Report id
                     CreateReportCell(elements, report.reportId.ToString(), currentX, widths[0], $"ReportRow_{i}");
                     currentX += widths[0];
 
