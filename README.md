@@ -7,6 +7,8 @@ Discord: rubmybricks
 ## Requirements:
 https://umod.org/plugins/inventory-viewer
 
+https://umod.org/plugins/map-note-teleport
+
 ## Permissions: 
 adminpanel.all - Master permission for everything 
 
