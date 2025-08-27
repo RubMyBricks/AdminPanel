@@ -34,8 +34,6 @@ adminpanel.kick - Kick players permission
 
 adminpanel.devwipe - Dev wipe permission
 
-adminpanel.timecontrol - Time control permission
-
 adminpanel.weathercontrol - Weather
 
 Make sure your moderators/admins have .use (to enable panel view) > whatever permission. 
