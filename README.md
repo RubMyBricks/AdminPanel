@@ -32,8 +32,8 @@ adminpanel.maxhealth - Max health permission
 
 adminpanel.kick - Kick players permission
 
-adminpanel.devwipe - Dev wipe permission
+adminpanel.reports - Access to the Reports
 
-adminpanel.weathercontrol - Weather
+adminpanel.entitykill - Enables Enitity Kill
 
 Make sure your moderators/admins have .use (to enable panel view) > whatever permission. 
